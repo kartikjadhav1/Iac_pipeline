@@ -17,6 +17,11 @@ resource "aws_vpc" "myvpc" {
     
 }
 
+resource "aws_vpc" "myvpc" {
+    cidr_block = "20.20.0.0/16"
+    
+}
+
 resource "aws_subnet" "pub_sub" {
   vpc_id            = aws_vpc.myvpc.id
   cidr_block        = "10.10.1.0/24"
