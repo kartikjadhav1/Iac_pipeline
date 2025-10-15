@@ -18,19 +18,19 @@ resource "aws_vpc" "myvpc" {
 }
 
 resource "aws_subnet" "pub_sub" {
-  vpc_id            = aws_vpc.kjmyvpc.id
+  vpc_id            = aws_vpc.myvpc.id
   cidr_block        = "10.10.1.0/24"
   availability_zone = "us-east-1a"
 
 }
 
 resource "aws_internet_gateway" "kj_igw01" {
-  vpc_id = aws_vpc.kjmyvpc.id
+  vpc_id = aws_vpc.myvpc.id
 }
 
 
 resource "aws_route_table" "custom_main_rtb" {
-  vpc_id = aws_vpc.kjmyvpc.id
+  vpc_id = aws_vpc.myvpc.id
 
   route {
     cidr_block = "0.0.0.0/0"
