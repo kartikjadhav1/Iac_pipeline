@@ -17,12 +17,12 @@ resource "aws_vpc" "myvpc" {
     
 }
 
-resource "aws_vpc" "myvpc" {
+resource "aws_vpc" "myvpc1" {
     cidr_block = "20.20.0.0/16"
     
 }
 
-resource "aws_vpc" "myvpc" {
+resource "aws_vpc" "myvpc2" {
     cidr_block = "30.30.0.0/16"
     
 }
